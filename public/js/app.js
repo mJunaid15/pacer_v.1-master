@@ -94,3 +94,58 @@ function hideShow() {
     x.style.display = "none";
   }
 }
+
+// read more button 
+function showmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+
+// checkbox only one at a time 
+function onlyOne(checkbox) {
+  var checkboxes = document.getElementsByName('check')
+  checkboxes.forEach((item) => {
+    // console.log(checkbox);
+      if (item !== checkbox) item.checked = false
+  })
+}
+
+
+// checbox checked get value and show the value another elemnt
+const handlerClick = () => {
+  var checkBox = document.querySelectorAll('input[type="checkbox"]');
+  for (var i = 0, n = checkBox.length; i < n; i++) {
+
+
+      if (checkBox[i].checked == true) {
+          // console.log('true')
+       let getValue = document.getElementsByClassName('priceGet');
+        let showSelectChecboxP = document.getElementById('showSelectChecboxP');
+         let values =  getValue[i].innerHTML
+          // console.log(  values );
+          showSelectChecboxP.innerHTML= values;
+
+
+
+      } 
+
+
+  }
+
+
+
+
+}
