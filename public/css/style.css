@@ -183,9 +183,18 @@ html {
 }
 .bg-navbar {
   background-color: #060d43;
+  position: sticky !important;
+  top: 0;
+  z-index: 9999;
+}
+.navbar{
+  padding: 2.0rem 0 !important;
+}
+.navbar-brand img{
+  width: 15.0rem;
 }
 .navLink {
-  font-size: 1.8rem !important;
+  font-size: 1.4rem !important;
   color: #fff !important;
   text-transform: capitalize !important;
   padding: 0.5rem 1.1rem !important;
@@ -1017,19 +1026,17 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
-
-.googlebtn{
-  background-color: #FFFFFF;
+.googlebtn {
+  background-color: #ffffff;
   border-radius: 1.5rem;
-  padding: .5rem 2.0rem;
+  padding: 0.5rem 2rem;
   border: 1px solid #e8e6e6;
   text-transform: capitalize;
   color: #000000;
   font-size: 1.2rem;
   font-weight: 500;
-
 }
-.forgottext{
+.forgottext {
   font-size: 1.4rem;
   color: #5ed58c;
   font-weight: 500;
@@ -1037,13 +1044,8 @@ footer {
   text-decoration: none;
 }
 
-
-
-
 .form-check-input {
-
   margin-top: 0.5em !important;
- 
 }
 
 .contactSectionhero {
@@ -1054,57 +1056,135 @@ footer {
   background-size: 100%;
   background-position-y: center;
 }
-.navigationsdiv{
-  padding: 6.0rem 0;
+.navigationsdiv {
+  padding: 6rem 0;
 }
-.paraNomal{
-  font-size:1.4rem ;
-  
+.paraNomal {
+  font-size: 1.4rem;
 }
-.callus{
-  border-radius: .5rem;
-  border: .1rem solid rgb(247, 244, 244);
-  padding: 1.0rem;
+.callus {
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(247, 244, 244);
+  padding: 1rem;
 }
-.detailsDiv{
+.detailsDiv {
   /* width: 400px; */
   /* height: 400px; */
   background-color: #fff;
-  padding: 3.0rem 2.0rem;
-  border-radius: 2.0rem;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
   position: absolute;
   top: 50%;
   left: 10%;
   /* transform: translateX(30%); */
   transform: translateY(-50%);
 }
-.map{
+.map {
   width: 100%;
-  height: 50.0rem;
+  height: 50rem;
 }
 .hero-sectionOurservices {
   height: 100vh;
-  background-image: linear-gradient(to bottom, #f8f9fac7, #f8f9fac7), url(../img/Deliverables/bghero.jpg);
+  background-image: linear-gradient(to bottom, #f8f9fac7, #f8f9fac7),
+    url(../img/Deliverables/bghero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .placeorderBtn_outline {
   background-color: transparent;
   color: #5ed58c;
-  border: .2rem solid #5ed58c;
+  border: 0.2rem solid #5ed58c;
   text-transform: capitalize;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
   font-size: 1.8rem;
   font-weight: bold;
 }
+.bg_lightgray {
+  background-color: #f9f9f9;
+}
+.steper {
+  padding: 2rem 1rem;
+  border-bottom: 0.2rem solid #c0c0c0;
+}
+.steper h1 {
+  color: #999797;
+}
+.activeSteper {
+  border-bottom: 0.2rem solid #060d43;
+}
+.activeSteper h1 {
+  color: #060d43;
+}
+
+/* drope file here  */
+.dropfiled {
+  padding: 3rem;
+  border: 0.1rem solid #c0c0c057;
+  border-radius: 1rem;
+}
+.chooseText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #060d43;
+}
+.dropFilehere {
+  margin-left: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+/* drope file here  end*/
+
+.btnDarkBlue {
+  background-color: #060d43;
+  padding: 0.8rem 2.5rem;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 500;
+  border: none;
+}
+.placeorderCards {
+  width: 60%;
+  padding-top: 5rem;
+  margin: 0 auto;
+}
+.text_green {
+  color: #5ed58c !important;
+  font-weight: 500;
+}
+.cardsPaperPlaceOrder {
+  padding: 1.3rem 1.5rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 10px;
+  /* background-color: #000; */
+  /* max-height: 370px; */
+}
+
+
+
+
+
+
+
+
 /* media query  */
 
 @media (min-width: 1200px) {
   /* .container {
     max-width: 163.7rem !important;
   } */
-  .mainsignDiv{
+  .mainsignDiv {
     width: 70%;
   }
 }
