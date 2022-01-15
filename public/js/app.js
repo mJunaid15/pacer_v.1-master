@@ -24,13 +24,13 @@ $(document).ready(function () {
       loop: true,
       stagePadding: 30,
       center: true,
-    //   items: 3,
+      //   items: 3,
       margin: 0,
       autoplay: false,
       autoplayTimeout: 6000,
       nav: false,
       dots: false,
-      
+
       responsive: {
         0: { items: 1 },
         575: { items: 2 },
@@ -56,36 +56,34 @@ $(document).ready(function () {
   }
 });
 
-
-// input tele js 
+// input tele js
 
 var input = document.querySelector("#phone");
 window.intlTelInput(input, {
-    // allowDropdown: false,
-    // autoHideDialCode: false,
-    // autoPlaceholder: "off",
-    // dropdownContainer: document.body,
-    // excludeCountries: ["us"],
-    // formatOnDisplay: false,
-    // geoIpLookup: function(callback) {
-    //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-    //     var countryCode = (resp && resp.country) ? resp.country : "";
-    //     callback(countryCode);
-    //   });
-    // },
-    // hiddenInput: "full_number",
-    initialCountry: "pk",
-    // localizedCountries: { 'de': 'Deutschland' },
-    // nationalMode: true,
-    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-    placeholderNumberType: "MOBILE",
-    // preferredCountries: ['cn', 'jp'],
-    separateDialCode: true,
-    utilsScript: "build/js/utils.js",
+  // allowDropdown: false,
+  // autoHideDialCode: false,
+  // autoPlaceholder: "off",
+  // dropdownContainer: document.body,
+  // excludeCountries: ["us"],
+  // formatOnDisplay: false,
+  // geoIpLookup: function(callback) {
+  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+  //     var countryCode = (resp && resp.country) ? resp.country : "";
+  //     callback(countryCode);
+  //   });
+  // },
+  // hiddenInput: "full_number",
+  initialCountry: "pk",
+  // localizedCountries: { 'de': 'Deutschland' },
+  // nationalMode: true,
+  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+  placeholderNumberType: "MOBILE",
+  // preferredCountries: ['cn', 'jp'],
+  separateDialCode: true,
+  utilsScript: "build/js/utils.js",
 });
 
-
-// hide and show js 
+// hide and show js
 function hideShow() {
   var x = document.getElementById("chatbot");
   if (x.style.display === "none") {
@@ -95,7 +93,7 @@ function hideShow() {
   }
 }
 
-// read more button 
+// read more button
 function showmore() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -103,49 +101,91 @@ function showmore() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
 
+function showmoree() {
+  var dots = document.getElementById("dotss");
+  var moreText = document.getElementById("moree");
+  var btnText = document.getElementById("myBtn1");
 
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+function showmoreee() {
+  var dots = document.getElementById("dotsss");
+  var moreText = document.getElementById("moreee");
+  var btnText = document.getElementById("myBtn2");
 
-// checkbox only one at a time 
-function onlyOne(checkbox) {
-  var checkboxes = document.getElementsByName('check')
-  checkboxes.forEach((item) => {
-    // console.log(checkbox);
-      if (item !== checkbox) item.checked = false
-  })
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+function showmoreeee() {
+  var dots = document.getElementById("dotssss");
+  var moreText = document.getElementById("moreeee");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
 }
 
+// checkbox only one at a time
+function onlyOne(checkbox) {
+  var checkboxes = document.getElementsByName("check");
+  checkboxes.forEach((item) => {
+    // console.log(checkbox);
+    if (item !== checkbox) item.checked = false;
+  });
+}
 
 // checbox checked get value and show the value another elemnt
 const handlerClick = () => {
   var checkBox = document.querySelectorAll('input[type="checkbox"]');
   for (var i = 0, n = checkBox.length; i < n; i++) {
-
-
-      if (checkBox[i].checked == true) {
-          // console.log('true')
-       let getValue = document.getElementsByClassName('priceGet');
-        let showSelectChecboxP = document.getElementById('showSelectChecboxP');
-         let values =  getValue[i].innerHTML
-          // console.log(  values );
-          showSelectChecboxP.innerHTML= values;
-
-
-
-      } 
-
-
+    if (checkBox[i].checked == true) {
+      // console.log('true')
+      let getValue = document.getElementsByClassName("priceGet");
+      let showSelectChecboxP = document.getElementById("showSelectChecboxP");
+      let values = getValue[i].innerHTML;
+      // console.log(  values );
+      showSelectChecboxP.innerHTML = values;
+    }
   }
+};
 
+// google map
+// function myMap() {
+//   var location = { lat: 24.860735, lng: 67.001137 };
 
-
-
-}
+//   var map = new google.maps.Map(document.getElementById("map"), {
+//     zoom:4,
+//     center:location,
+//   });
+// }
