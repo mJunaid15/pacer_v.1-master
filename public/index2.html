@@ -2,9 +2,29 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKPB89R');
+    </script>
+
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="4xlew52zj2lwme1lpbf9qbgwzyw53w" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/css.reset.css">
 
@@ -33,9 +53,306 @@
 
     <!-- flags input  -->
     <link rel="stylesheet" href="css/intlTelInput.css">
+    <style>
+        .countdown.show .running {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: wrap;
+            flex-flow: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .countdown.show .running timer {
+            font-size: 55px;
+            font-weight: 600;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            line-height: 1;
+            color: #3ec474;
+        }
+
+        .countdown.show .running timer .days,
+        .countdown.show .running timer .hours,
+        .countdown.show .running timer .minutes,
+        .countdown.show .running timer .seconds {
+            width: 70px;
+            text-align: left;
+            margin: 0 7px;
+        }
+
+        @media (max-width: 480px) {
+            .countdown.show .running timer {
+                font-size: 40px;
+            }
+
+            .countdown.show .running timer .days,
+            .countdown.show .running timer .hours,
+            .countdown.show .running timer .minutes,
+            .countdown.show .running timer .seconds {
+                width: 49px;
+            }
+        }
+
+        .countdown.show .running .labels {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 14px;
+        }
+
+        .countdown.show .running .labels span {
+            width: 97px;
+            text-align: center;
+            margin: 0px 2px;
+        }
+
+        @media (max-width: 480px) {
+            .countdown.show .running .labels span {
+                width: 69px;
+            }
+        }
+
+        .countdown.show .running .text {
+            font-size: 20px;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        .countdown.show .running button {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        .countdown.show .running .break {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            height: 0;
+        }
+
+        .countdown.show .ended {
+            display: none;
+            -ms-flex-flow: wrap;
+            flex-flow: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .countdown.show .ended .text {
+            font-size: 20px;
+        }
+
+        .countdown.show .ended button {
+            border: none;
+            background-color: #5a0000;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        .countdown.show .ended .break {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            height: 0;
+        }
+
+        .modal-body {
+            background-image: url("images/popup.png");
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .modal-content {
+            /*background-image: url("images/popup.png");*/
+            /*background-color: #cccccc;*/
+        }
+
+        /*.modal-header {*/
+        /*    background-color:white !important;*/
+        /*}*/
+        .modal-button {
+            border: none;
+            background-color: #3ec474;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            float: center !important;
+            margin-top: 75%;
+            margin-left: 40%;
+        }
+
+        /* }
+      @media (max-width: 8000px) { 
+    
+    .modal-button{
+          float:center !important;
+  margin-top: 75%;
+  margin-left: 40%;
+    }
+} */
+        @media (max-width: 540px) {
+
+            .modal-button {
+                float: center !important;
+                margin-top: 75%;
+                margin-left: 40%;
+            }
+        }
+
+        @media (max-width: 539px) {
+
+            .modal-button {
+                float: center !important;
+                margin-top: 115%;
+                margin-left: 35%;
+            }
+
+            .modal-body {
+                height: 500px;
+                background-size: 100% 100%;
+            }
+        }
+
+        @media (min-width: 321px) and (max-width: 538.98px) {
+            .modal-button {
+                float: center !important;
+                margin-top: 110%;
+                margin-left: 32.5%;
+            }
+
+            .modal-body {
+                height: 500px;
+                background-size: 100% 100%;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 320.98px) {
+
+            .modal-button {
+                float: center !important;
+                margin-top: 125%;
+                margin-left: 29%;
+            }
+
+            .modal-body {
+                height: 500px;
+                background-size: 100% 100%;
+            }
+        }
+
+        @media (min-width: 50px) and (max-width: 299.98px) {
+
+            .modal-button {
+                float: center !important;
+                margin-top: 130%;
+                margin-left: 28%;
+            }
+
+            .modal-body {
+                height: 500px;
+                background-size: 100% 100%;
+            }
+        }
+
+        /*.container { margin: 150px auto; }*/
+    </style>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '953640591913101');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=953640591913101&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
-<body>
+<body onload='countdown()'>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <!--<div class="modal-header">-->
+                <!--  <button type="button" class="close " data-dismiss="modal">&times;</button>-->
+                <!--<h4 class="modal-title text-center"style="color:#3ec474;">MEGA SALE HOUR</h4>-->
+                <!--</div>-->
+                <div class="modal-body">
+                    <button type="button" class="close" style="color:#ffde59" data-dismiss="modal">&times;</button>
+                    <!--  <h4 class="text-center">100% Free Assignments - $0 cost</h4>-->
+                    <!--  <div id="warda"class="jumbotron countdown show" data-Date='2022/11/10 13:37:53'>-->
+                    <!--  <h5 class="text-center">Chat now and avail this mega offer</h5>-->
+                    <!--<div style="margin:34rem !important;"></div>-->
+                    <!--  <div class="running">-->
+                    <!--    <timer>-->
+                    <!--     <span class="hours"></span>:<span class="minutes"></span>:<span-->
+                    <!--              class="seconds"></span>-->
+                    <!--      </timer>-->
+                    <!--      <div class="break"></div>-->
+                    <!--      <div class="labels"><span>Hours</span><span>Minutes</span><span>Seconds</span>-->
+                    <!--      </div>-->
+                    <!--      <div class="break"></div>-->
+                    <!--      <div class="text">Offer Ended</div>-->
+                    <!--      <div class="break"></div>-->
+                    <!--       <a href="javascript:void(Tawk_API.toggle())">-->
+                    <!--      <button >Order Now!</button>-->
+                    <!--      </a>-->
+                    <!--  </div>-->
+
+                    <!--  <div class="ended">-->
+                    <!--      <div class="text">Offer is ended</div>-->
+                    <!--      <div class="break"></div>-->
+                    <!--      <button>Visit Our Website </button>-->
+                    <!--  </div>-->
+                    <!--</div>-->
+
+                    <a href="javascript:void(Tawk_API.toggle())" style="">
+                        <button class="modal-button">Order Now!</button>
+                    </a>
+
+
+                </div>
+                <!--<div class="modal-footer">-->
+                <!--  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKPB89R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
 
     <section class="mainSection">
 
@@ -97,11 +414,7 @@
                             <h2 class="heroPara pb-lg-4">Our professional custom writing service is fast, reliable, and
                                 affordable. <br>
                                 control over your studies</h2>
-                            <!--  <button class="placeorderBtn mt-4 mt-lg-0">Place Your Order</button> -->
-                            <a class=" placeorderBtn mt-4 mt-lg-0 text-decoration-none"
-                                href="javascript:void(Tawk_API.toggle())">
-                                Place Your Order
-                            </a>
+                            <button class="placeorderBtn mt-4 mt-lg-0">Place Your Order</button>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 mt-lg-0 mt-5 d-lg-flex justify-content-lg-center">
@@ -183,9 +496,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 text-center">
-
-                                        <a href="javascript:void(Tawk_API.toggle())" class=" btnGreen "> Order Now</a>
-
+                                        <button class="btnGreen "> Order Now</button>
                                     </div>
                                 </form>
                             </div>
@@ -810,9 +1121,7 @@
                                     </div>
                                     <div class="col-12 col-lg-3">
                                         <div class="mb-3 mt-3 mt-lg-0  ">
-                                            <!--  <button class="btnGreen w-100"> order now</button> -->
-                                            <a href="javascript:void(Tawk_API.toggle())" class=" btnGreen w-100"> Order
-                                                Now</a>
+                                            <button class="btnGreen w-100"> order now</button>
                                         </div>
                                     </div>
 
@@ -868,7 +1177,8 @@
                         </div>
                         <div class="ps-4">
                             <p class="sub-heading text-start">Custom Formatting</p>
-                            <p class="smallDes pe-5"> We adhere to your instructions strictly and follow the minute
+                            <p class="smallDes pe-5 text-start"> We adhere to your instructions strictly and follow the
+                                minute
                                 peculiarities
                                 of each formatting style, such as APA, MLA, Chicago/Turabian, Harvard, OSCOLA, IEEE, or
                                 any
@@ -908,7 +1218,8 @@
                         </div>
                         <div class="ps-4">
                             <p class="sub-heading text-start">The free package</p>
-                            <p class="smallDes pe-5">With each order, you will get free title page, bibliography,
+                            <p class="smallDes pe-5 text-start">With each order, you will get free title page,
+                                bibliography,
                                 support assistance,
                                 and plagiarism report</p>
                         </div>
@@ -1054,98 +1365,96 @@
                     <div class="bbb_viewed_slider_container">
                         <div class="owl-carousel owl-theme bbb_viewed_slider">
                             <div class="owl-item">
-                                <div class="cardsPaperOwl d-flex align-items-center justify-content-center">
+                                <div class="cardsPaper d-flex align-items-center">
                                     <div>
-                                        <h1 class="cardheading">
-                                            expository essay
-                                        </h1>
-                                        <p class="smallDes text-black-50 mb-0 ">paper title</p>
-                                        <p class="smallDes text-black pb-5 overflowAuto">online education</p>
-                                        <p class="smallDes text-black-50 mb-0">academic level</p>
-                                        <p class="smallDes text-black pb-5">undergraduate (years 1-2)</p>
+                                    <h1 class="cardheading">
+                                        expository essay
+                                    </h1>
+                                    <p class="smallDes text-black-50 mb-0 ">paper title</p>
+                                    <p class="smallDes text-black pb-5 overflowAuto">online education</p>
+                                    <p class="smallDes text-black-50 mb-0">academic level</p>
+                                    <p class="smallDes text-black pb-5">undergraduate (years 1-2)</p>
 
-                                        <div class="d-flex pb-4">
-                                            <div class="pe-4">
-                                                <p class="smallDes text-black-50 mb-0">descipline</p>
-                                                <p class="smallDes text-black">english 101</p>
-                                            </div>
-                                            <div>
-                                                <p class="smallDes text-black-50 mb-0">paper format</p>
-                                                <p class="smallDes text-black">MLA fromat</p>
-                                            </div>
-
-
+                                    <div class="d-flex pb-4">
+                                        <div class="pe-4">
+                                            <p class="smallDes text-black-50 mb-0">descipline</p>
+                                            <p class="smallDes text-black">english 101</p>
                                         </div>
                                         <div>
-                                            <button class="btnGreen">view this sample</button>
+                                            <p class="smallDes text-black-50 mb-0">paper format</p>
+                                            <p class="smallDes text-black">MLA fromat</p>
                                         </div>
+
+
+                                    </div>
+                                    <div>
+                                        <button class="btnGreen">view this sample</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="owl-item">
-                                <div class="cardsPaperOwl d-flex justify-content-center align-items-center">
+                                <div class="cardsPaper d-flex align-items-center">
                                     <div>
-                                        <h1 class="cardheading">
-                                            analysis essay
-                                        </h1>
-                                        <p class="smallDes text-black-50 mb-0">paper title</p>
-                                        <p class="smallDes text-black pb-5 overflowAuto">Advantages and disadvantages of
-                                            lowering the
-                                            voting age of thirteen</p>
-                                        <p class="smallDes text-black-50 mb-0">academic level</p>
-                                        <p class="smallDes text-black pb-5">undergraduate (years 1-2)</p>
+                                    <h1 class="cardheading">
+                                        analysis essay
+                                    </h1>
+                                    <p class="smallDes text-black-50 mb-0">paper title</p>
+                                    <p class="smallDes text-black pb-5 overflowAuto">Advantages and disadvantages of lowering the
+                                        voting age of thirteen</p>
+                                    <p class="smallDes text-black-50 mb-0">academic level</p>
+                                    <p class="smallDes text-black pb-5">undergraduate (years 1-2)</p>
 
-                                        <div class="d-flex pb-4">
-                                            <div class="pe-4">
-                                                <p class="smallDes text-black-50 mb-0">descipline</p>
-                                                <p class="smallDes text-black">Political Sciences</p>
-                                            </div>
-                                            <div>
-                                                <p class="smallDes text-black-50 mb-0">paper format</p>
-                                                <p class="smallDes text-black">APAt</p>
-                                            </div>
-
-
+                                    <div class="d-flex pb-4">
+                                        <div class="pe-4">
+                                            <p class="smallDes text-black-50 mb-0">descipline</p>
+                                            <p class="smallDes text-black">Political Sciences</p>
                                         </div>
                                         <div>
-                                            <button class="btnGreen">view this sample</button>
+                                            <p class="smallDes text-black-50 mb-0">paper format</p>
+                                            <p class="smallDes text-black">APAt</p>
                                         </div>
-                                    </div>
 
+
+                                    </div>
+                                    <div>
+                                        <button class="btnGreen">view this sample</button>
+                                    </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="owl-item">
-                                <div class="cardsPaperOwl justify-content-center d-flex align-items-center">
+                                <div class="cardsPaper d-flex align-items-center">
                                     <div>
 
+                                    
+                                    <h1 class="cardheading">
+                                        caused and effect essay
+                                    </h1>
+                                    <p class="smallDes text-black-50 mb-0">paper title</p>
+                                    <p class="smallDes text-black pb-5 overflowAuto">placing taxes on junk food and fatty snacks. Can
+                                        we tax people healthy?</p>
+                                    <p class="smallDes text-black-50 mb-0">academic level</p>
+                                    <p class="smallDes text-black pb-5">High school</p>
 
-                                        <h1 class="cardheading">
-                                            caused and effect essay
-                                        </h1>
-                                        <p class="smallDes text-black-50 mb-0">paper title</p>
-                                        <p class="smallDes text-black pb-5 overflowAuto">placing taxes on junk food and
-                                            fatty snacks. Can
-                                            we tax people healthy?</p>
-                                        <p class="smallDes text-black-50 mb-0">academic level</p>
-                                        <p class="smallDes text-black pb-5">High school</p>
-
-                                        <div class="d-flex pb-4">
-                                            <div class="pe-4">
-                                                <p class="smallDes text-black-50 mb-0">descipline</p>
-                                                <p class="smallDes text-black">Nutrition/Dietary</p>
-                                            </div>
-                                            <div>
-                                                <p class="smallDes text-black-50 mb-0">paper format</p>
-                                                <p class="smallDes text-black">APA</p>
-                                            </div>
-
-
+                                    <div class="d-flex pb-4">
+                                        <div class="pe-4">
+                                            <p class="smallDes text-black-50 mb-0">descipline</p>
+                                            <p class="smallDes text-black">Nutrition/Dietary</p>
                                         </div>
                                         <div>
-                                            <button class="btnGreen">view this sample</button>
+                                            <p class="smallDes text-black-50 mb-0">paper format</p>
+                                            <p class="smallDes text-black">APA</p>
                                         </div>
+
+
+                                    </div>
+                                    <div>
+                                        <button class="btnGreen">view this sample</button>
                                     </div>
                                 </div>
+                            </div>
                             </div>
 
                         </div>
@@ -2950,7 +3259,7 @@
 
             </div>
         </footer>
-        <!-- <div class="messageChat mt-5" id="chatbot" style="display: none;">
+        <div class="messageChat mt-5" id="chatbot" style="display: none;">
             <div class="headerChat">
                 <h1 class="sub-heading text-white text-start mb-0">Live chat</h1>
             </div>
@@ -3031,7 +3340,7 @@
                 <img src="img/Essaypacer-Assets/chat-icon.svg" class="img-fluid">
             </div>
         </div>
-        -->
+        <div>
 
 
 
@@ -3040,107 +3349,18 @@
 
     </section>
 
-
-    <script>
-        function loadCSS(e, t, n) {
-            "use strict";
-            var i = window.document.createElement("link");
-            var o = t || window.document.getElementsByTagName("script")[0];
-            i.rel = "stylesheet";
-            i.href = e;
-            i.media = "only x";
-            o.parentNode.insertBefore(i, o);
-            setTimeout(function () {
-                i.media = n || "all"
-            })
-        };
-    </script>
-    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-
-    <script type='text/javascript' src='./wp-content/themes/expert-ux/js/min/page-front.min.js'></script>
-    <script>
-        $('.show-more-desktop, .show-more-mobile').click(function () {
-            $('.prefooter-menu-wrap').css({
-                'overflow': 'initial',
-                'height': 'auto'
-            });
-            $(this).hide();
-        })
-    </script>
-
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/605840cdf7ce182709327fac/1f1cbq939';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
-
-    <!-- GetButton.io widget -->
-    <script type="text/javascript">
-        (function () {
-            var options = {
-                whatsapp: "+447415783672", // WhatsApp number
-                call_to_action: "Message us", // Call to action
-                position: "left", // Position may be 'right' or 'left'
-            };
-            var proto = document.location.protocol,
-                host = "getbutton.io",
-                url = proto + "//static." + host;
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function () {
-                WhWidgetSendButton.init(host, proto, options);
-            };
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        })();
-    </script>
-    <!-- /GetButton.io widget -->
-
-    <!-- WhatsApp Button Tracing -->
-    <script>
-        window.addEventListener('load', function () {
-            jQuery('[href="https://wa.me/447415783672"]').click(function () {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-397761270/UkDqCPmj7okCEPa11b0B'
-                });
-            })
-        })
-    </script>
-    <!-- /WhatsApp Button Tracing -->
-
-    <!-- Begin Tawk.to - Facebook event -->
-    <script>
-        window.Tawk_API = window.Tawk_API || {};
-        var hasContacted = false;
-        window.Tawk_API.onChatMaximized = function () {
-            if (!hasContacted) {
-                hasContacted = true;
-                fbq('track', 'Contact');
-            }
-        };
-        window.Tawk_API.onChatStarted = function () {
-            fbq('track', 'Lead');
-        };
-    </script>
-    <!-- End Tawk.to - Facebook event -->
-
-    <div data-crm-widget="disclaimer" data-params='{"theme":"dark"}'></div>
     <script src="js/intlTelInput.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <script src="js/app.js"></script>
+    <script src="multi-countdown.js"></script>
+    <script>
+        $(window).load(function () {
+            $("#myModal").modal("show");
+        });
+    </script>
 
 </body>
 

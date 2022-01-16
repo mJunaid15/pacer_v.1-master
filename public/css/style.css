@@ -626,8 +626,39 @@ html {
   border: 0.1rem solid #ddd;
   border-radius: 10px;
   /* background-color: #000; */
-  max-height: 370px;
+  height: 370px;
+  /* width: 250px; */
+  /* background-color: red; */
 }
+.cardsPaperOwl{
+  padding: 1.3rem 1.5rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 10px;
+  /* background-color: #000; */
+  height: 370px;
+  width: 250px;
+  /* background-color: red; */
+}
+.overflowAuto{
+  overflow-y: auto;
+  height: 6.0rem;
+  /* scrollbar-width: thin; */
+  /* background-color: red; */
+}
+
+.overflowAuto::-webkit-scrollbar {
+  width: .3rem;
+}
+
+.overflowAuto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflowAuto::-webkit-scrollbar-thumb {
+  background-color: rgba(208, 204, 204, 0.555) ;
+  border-radius: .6rem;
+  /* border: .3rem solid white; */
+}
+
 .cardheading {
   font-size: 1.4rem;
   font-weight: 600;
@@ -643,7 +674,7 @@ html {
   padding: 1.1rem;
   position: relative;
   padding: 11rem 0;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -1061,6 +1092,7 @@ footer {
 }
 .paraNomal {
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 .callus {
   border-radius: 0.5rem;
@@ -1174,13 +1206,23 @@ footer {
 
 
 
-
+.seacrhMaindiv{
+  padding: 2.0rem 1.5rem;
+  border: .1rem solid #f3f2f2;
+  
+  border-radius: 1.0rem;
+}
 
 
 
 /* media query  */
 
 @media (min-width: 1200px) {
+  .seacrhMaindiv{
+  
+    width: 65%;
+ 
+  }
   /* .container {
     max-width: 163.7rem !important;
   } */
@@ -1199,8 +1241,19 @@ footer {
   }
 }
 @media (max-width: 769px) {
+  .cardsPaper {
+   
+  
+    height: auto;
+   
+}
+
   html {
     font-size: 55%;
+  }
+  .cardsPaperOwl{
+    margin: 0 auto;
+
   }
   .hero-section {
     height: auto;

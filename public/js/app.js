@@ -22,10 +22,10 @@ $(document).ready(function () {
 
     viewedSlider.owlCarousel({
       loop: true,
-      stagePadding: 30,
+      stagePadding: 10,
       center: true,
       //   items: 3,
-      margin: 0,
+      margin: 20,
       autoplay: false,
       autoplayTimeout: 6000,
       nav: false,
