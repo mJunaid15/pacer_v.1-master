@@ -1,0 +1,210 @@
+.countdown.show .running {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.countdown.show .running timer {
+    font-size: 55px;
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1;
+    color: #3ec474;
+}
+
+.countdown.show .running timer .days,
+.countdown.show .running timer .hours,
+.countdown.show .running timer .minutes,
+.countdown.show .running timer .seconds {
+    width: 70px;
+    text-align: left;
+    margin: 0 7px;
+}
+
+@media (max-width: 480px) {
+    .countdown.show .running timer {
+        font-size: 40px;
+    }
+
+    .countdown.show .running timer .days,
+    .countdown.show .running timer .hours,
+    .countdown.show .running timer .minutes,
+    .countdown.show .running timer .seconds {
+        width: 49px;
+    }
+}
+
+.countdown.show .running .labels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+}
+
+.countdown.show .running .labels span {
+    width: 97px;
+    text-align: center;
+    margin: 0px 2px;
+}
+
+@media (max-width: 480px) {
+    .countdown.show .running .labels span {
+        width: 69px;
+    }
+}
+
+.countdown.show .running .text {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.countdown.show .running button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.countdown.show .running .break {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    height: 0;
+}
+
+.countdown.show .ended {
+    display: none;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.countdown.show .ended .text {
+    font-size: 20px;
+}
+
+.countdown.show .ended button {
+    border: none;
+    background-color: #5a0000;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.countdown.show .ended .break {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    height: 0;
+}
+
+.modal-body {
+    background-image: url("images/popup.png");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-content {
+    background-image: url("images/popup.png");
+    background-color: #cccccc;
+}
+
+.modal-header {
+    
+    /*    background-color:white !important;*/
+    
+}
+
+ .modal-button {
+    border: none;
+    background-color: #3ec474;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    float: center !important;
+    margin-top: 60%;
+    margin-left: 40%;
+
+}
+
+@media (max-width: 540px) {
+
+    .modal-button {
+        float: center !important;
+        margin-top: 75%;
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 539px) {
+
+    .modal-button {
+        float: center !important;
+        margin-top: 115%;
+        margin-left: 35%;
+    }
+
+    .modal-body {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 538.98px) {
+    .modal-button {
+        float: center !important;
+        margin-top: 110%;
+        margin-left: 32.5%;
+    }
+
+    .modal-body {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 320.98px) {
+
+    .modal-button {
+        float: center !important;
+        margin-top: 125%;
+        margin-left: 29%;
+    }
+
+    .modal-body {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (min-width: 50px) and (max-width: 299.98px) {
+
+    .modal-button {
+        float: center !important;
+        margin-top: 130%;
+        margin-left: 28%;
+    }
+
+    .modal-body {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+}
+
+/* .container {
+    margin: 150px auto;
+} */
+

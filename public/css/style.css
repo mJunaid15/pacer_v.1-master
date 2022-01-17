@@ -195,7 +195,7 @@ html {
   z-index: 9999;
 }
 .navbar{
-  padding: 2.0rem 0 !important;
+  padding: 1.0rem 0 !important;
 }
 .navbar-brand img{
   width: 15.0rem;
@@ -932,7 +932,7 @@ html {
 }
 .mapDIvImg {
   width: 100%;
-  height: 50rem;
+  height: 60rem;
   background-image: url("../img/Essaypacer-Assets/world-map.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1228,6 +1228,12 @@ footer {
 a, a:hover, a:focus, a:active {
   text-decoration: none !important;
   color: inherit !important;
+}
+.startyellow{
+  color: #ffd700;
+}
+.startgray{
+  color: #c0c0c0;
 }
 
 /* media query  */
