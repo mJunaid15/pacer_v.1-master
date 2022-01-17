@@ -10,7 +10,7 @@
 }
 
 .countdown.show .running timer {
-    font-size: 55px;
+    font-size: 5.5rem;
     font-weight: 600;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23,21 +23,21 @@
 .countdown.show .running timer .hours,
 .countdown.show .running timer .minutes,
 .countdown.show .running timer .seconds {
-    width: 70px;
+    width: 7.0rem;
     text-align: left;
-    margin: 0 7px;
+    margin: 0 .7rem;
 }
 
 @media (max-width: 480px) {
     .countdown.show .running timer {
-        font-size: 40px;
+        font-size: 4.0rem;
     }
 
     .countdown.show .running timer .days,
     .countdown.show .running timer .hours,
     .countdown.show .running timer .minutes,
     .countdown.show .running timer .seconds {
-        width: 49px;
+        width: 4.9rem;
     }
 }
 
@@ -45,24 +45,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .countdown.show .running .labels span {
-    width: 97px;
+    width: 9.7rem;
     text-align: center;
-    margin: 0px 2px;
+    margin: .0rem .2rem;
 }
 
 @media (max-width: 480px) {
     .countdown.show .running .labels span {
-        width: 69px;
+        width: 6.9rem;
     }
 }
 
 .countdown.show .running .text {
-    font-size: 20px;
-    margin-top: 12px;
+    font-size: 2.0rem;
+    margin-top: 1.2rem;
     font-weight: 600;
 }
 
@@ -70,9 +70,9 @@
     border: none;
     background-color: black;
     color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin: 10px;
+    border-radius: 2.5rem;
+    padding: 1.0rem 2.0rem;
+    margin: 1.0rem;
 }
 
 .countdown.show .running .break {
@@ -91,7 +91,7 @@
 }
 
 .countdown.show .ended .text {
-    font-size: 20px;
+    font-size: 2.0rem;
 }
 
 .countdown.show .ended button {
@@ -99,8 +99,8 @@
     background-color: #5a0000;
     color: white;
     border-radius: 25px;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 1.0rem 2.0rem;
+    margin: 1.0rem;
 }
 
 .countdown.show .ended .break {
@@ -111,7 +111,7 @@
 
 .modal-body {
     background-image: url("images/popup.png");
-    height: 500px;
+    height: 50.0rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,8 +132,8 @@
     border: none;
     background-color: #3ec474;
     color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
+    border-radius: 2.5rem;
+    padding: 1.0rem 2.0rem;
     float: center !important;
     margin-top: 60%;
     margin-left: 40%;

@@ -1236,9 +1236,106 @@ a, a:hover, a:focus, a:active {
   color: #c0c0c0;
 }
 
+
+
+
+/* steper inline  */
+.stepperinline {
+  display: table;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+.stepperinline .stepper-item, .stepper .stepper-connector {
+  display: table-cell;
+}
+.stepperinline .stepper-item {
+  width: 5.4rem;
+  text-align: center;
+  /* background-color: red; */
+}
+.stepperinline .stepper-item.step-complete .stepper-circle {
+  background-color: #5ed58c;
+}
+.stepperinline .stepper-item.step-last-complete .stepper-label {
+  width: 100%;
+  display: inline-block;
+}
+.stepperinline .stepper-item .stepper-label {
+  display: none;
+  position: absolute;
+  top: 74px;
+  left: 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #060d43;
+  text-transform: capitalize;
+}
+.stepperinline .stepper-connector hr {
+  height: .2rem;
+  margin: 0 -1.3em;
+  transform: translateY(-0.3em);
+  color: #ddd;
+  background-color: #ddd;
+  border: none;
+}
+@media (min-width: 600px) {
+  .stepperinline .stepper-item {
+    position: relative;
+  }
+  .stepperinline .stepper-item .stepper-label {
+    display: inline-block;
+  }
+}
+
+.stepper-circle {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.2rem;
+  color: #fff;
+  line-height: 2.4rem;
+  display: flex;
+  text-align: center;
+  background-color: #999;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.cheatingessaySection{
+  background-image:
+    linear-gradient(to bottom, #5ed58c1b , #5ed58c1c),
+    url('../img/Deliverables/promo-background.png');
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  padding: 4.0rem 0;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+
 /* media query  */
 
 @media (min-width: 1200px) {
+  .profesionalWritersection{
+    padding: 15.0rem 0;
+  }
+  .cheatingessaySection{
+   
+   
+    height: 50.0rem;
+  
+    
+  }
   .seacrhMaindiv{
   
     width: 65%;
