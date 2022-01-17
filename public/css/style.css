@@ -974,21 +974,21 @@ html {
 
 /* slider customisezation  */
 .carousel-indicators [data-bs-target] {
-  width: 10px !important;
-  height: 10px !important;
+  width: 1.0rem !important;
+  height: 1.0rem !important;
   border-radius: 50% !important;
   background-color: #999797 !important;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-top: 1.0rem solid transparent;
+  border-bottom: 1.0rem solid transparent;
   opacity: 0.5;
   transition: opacity 0.6s ease;
 }
 .carousel-indicators .active {
   opacity: 1;
-  width: 22px !important;
-  height: 11px !important;
+  width: 2.2rem !important;
+  height: 1.1rem !important;
   border-radius: 0;
-  border-radius: 17px !important;
+  border-radius: 1.7rem !important;
   /* margin-top: 1px; */
   background-color: #5ed58c !important;
 }
@@ -1070,7 +1070,7 @@ footer {
   background-color: #ffffff;
   border-radius: 1.5rem;
   padding: 0.5rem 2rem;
-  border: 1px solid #e8e6e6;
+  border: .1rem solid #e8e6e6;
   text-transform: capitalize;
   color: #000000;
   font-size: 1.2rem;
@@ -1207,7 +1207,7 @@ footer {
 .cardsPaperPlaceOrder {
   padding: 1.3rem 1.5rem;
   border: 0.1rem solid #ddd;
-  border-radius: 10px;
+  border-radius: 1.0rem;
   /* background-color: #000; */
   /* max-height: 370px; */
 }
