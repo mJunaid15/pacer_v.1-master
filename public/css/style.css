@@ -6,7 +6,9 @@ html {
   margin: 0 auto;
   position: relative;
 }
-
+.marginTop{
+  margin-top: 1.8rem;
+}
 
 /* scrollbar css  */
 
@@ -86,7 +88,7 @@ html {
 .msgText {
   font-size: 1.4rem;
   font-weight: 400;
-  text-transform: capitalize;
+ 
 }
 .comingmsg {
   background-color: #e7e5e5;
@@ -208,21 +210,23 @@ html {
 .navLink {
   font-size: 1.4rem !important;
   color: #fff !important;
-  text-transform: capitalize !important;
+ 
   padding: 0.5rem 1.1rem !important;
+  letter-spacing: .1rem !important;
 }
 .btnLogin {
-  font-size: 1.8rem !important ;
+  font-size: 1.4rem !important ;
   color: #5ed58c !important ;
-  border: 0.1rem solid #5ed58c;
-  text-transform: capitalize;
-  padding: 0.5rem 1.5rem !important;
+  border: 0.2rem solid #5ed58c;
+  font-weight: 500;
+  padding: 0.3rem 1.5rem !important;
   border-radius: 2rem;
   transition: all 0.5s ease;
+  letter-spacing: .1rem;
 }
 .btnLogin:hover {
   color: #fff !important ;
-  border: 0.1rem solid #fff;
+  border: 0.2rem solid #fff;
 }
 .hero-section {
   height: 100vh;
@@ -250,10 +254,28 @@ html {
   background-color: #fff;
   color: #060d43;
   border: none;
-  text-transform: capitalize;
+ font-weight: 500;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
   font-size: 1.8rem;
+}
+.bluebtn{
+ 
+    background-color: #060d43;
+    color: #fff !important;
+    border: none;
+   font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+}
+.bluebtn:hover{
+  background-color: #fff;
+  color: #060d43 !important;
+  border: .1rem solid #060d43;
+
 }
 .heroCalForm {
   background-color: #fff;
@@ -265,16 +287,21 @@ html {
 .sub-heading {
   font-size: 1.8rem;
   text-align: center;
-  text-transform: capitalize;
+  text-align: justify;
   color: #060d43;
   font-weight: 600;
 }
+.plusMinusBtnwidth{
+  width: 13.0rem;
+}
 .smallPara {
+  text-align: justify;
   font-size: 1.4rem;
   font-weight: normal;
   color: #060d43;
 }
 .labelTitle {
+  text-align: justify;
   font-size: 1.4rem;
   font-weight: 600;
   color: #060d43;
@@ -313,9 +340,9 @@ html {
   padding: 0.9rem;
   text-align: center;
   font-size: 1.4rem;
-  color: #060d43;
+  color: #212529 ;
   font-weight: bold;
-  border: 0.1rem solid #c0c0c0;
+  border: 0.1rem solid rgba(221, 221, 221, 0.486) !important;
   border-radius: 2rem;
 }
 .border-bottom-dash {
@@ -324,7 +351,7 @@ html {
 .smallDes {
   font-size: 1.3rem;
   color: #060d43;
-  text-transform: capitalize;
+  
 }
 .btnGreen {
   border: none;
@@ -358,13 +385,13 @@ html {
   color: #060d43;
   display: flex;
   flex-direction: column;
-  text-transform: capitalize;
+ 
 }
 .numberExpertsapn {
   color: #5ed58c;
   font-weight: 500;
   font-size: 1.4rem;
-  text-transform: capitalize;
+ 
 }
 .numberOfexpertsDiv {
   width: 80%;
@@ -486,7 +513,7 @@ html {
 /* tab css end  */
 
 .tabformDiv {
-  padding: 2rem;
+  padding: 2rem 6rem;
   background-color: #fff;
 }
 
@@ -679,7 +706,7 @@ html {
   padding-bottom: 1rem;
   color: #060d43;
   padding-bottom: 3rem;
-  text-transform: capitalize;
+ 
 }
 
 /* product slider css start  */
@@ -687,7 +714,7 @@ html {
 .bbb_main_container {
   padding: 1.1rem;
   position: relative;
-  padding: 11rem 0;
+  padding-bottom: 10rem;
   width: 80%;
   margin: 0 auto;
 }
@@ -827,7 +854,7 @@ html {
 .faqTtile {
   font-size: 2.4rem;
   color: #060d43;
-  text-transform: capitalize;
+
 }
 .accordion-button:not(.collapsed) {
   color: #000 !important;
@@ -835,7 +862,11 @@ html {
   box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 .accBtntitle {
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+}
+.textJustify{
+  text-align: justify !important;
 }
 .accBtntitle::after {
   width: 2.25rem !important;
@@ -907,30 +938,34 @@ html {
 }
 
 .sub-heading-28px {
+  text-align: justify;
   font-size: 2.8rem;
   font-weight: 300;
-  text-transform: capitalize;
+ 
   color: #060d43 !important;
   line-height: 4.2rem;
 }
 .Heading_45px {
+  text-align: justify;
   font-size: 4.5rem;
   font-weight: 400;
-  text-transform: capitalize;
+ 
   color: #060d43;
 }
 .sub-heading-26px {
+  text-align: justify;
   font-size: 2.6rem;
   font-weight: 300;
-  text-transform: capitalize;
+ 
   color: #060d43;
 }
 .sub-heading-24px {
+  text-align: justify;
   font-size: 2rem;
   color: #060d43;
 
   font-weight: 300;
-  text-transform: capitalize;
+ 
 }
 .customerTestimonialSection {
   padding: 4rem 0;
@@ -1040,7 +1075,7 @@ footer {
   color: #060d43;
   font-size: 1.4rem;
   font-weight: 500;
-  text-transform: capitalize;
+ 
   cursor: pointer;
   transition: all 0.8s ease-in-out;
 }
@@ -1049,7 +1084,7 @@ footer {
 }
 
 .footerHeading {
-  text-transform: capitalize;
+  
   font-weight: 600;
   font-size: 1.8rem;
   color: #060d43;
@@ -1076,7 +1111,7 @@ footer {
   border-radius: 1.5rem;
   padding: 0.5rem 2rem;
   border: .1rem solid #e8e6e6;
-  text-transform: capitalize;
+ 
   color: #000000;
   font-size: 1.2rem;
   font-weight: 500;
@@ -1085,7 +1120,7 @@ footer {
   font-size: 1.4rem;
   color: #5ed58c;
   font-weight: 500;
-  text-transform: capitalize;
+
   text-decoration: none;
 }
 
@@ -1106,7 +1141,7 @@ footer {
 }
 .paraNomal {
   font-size: 1.4rem;
-  text-transform: capitalize;
+  text-align: justify;
 }
 .callus {
   border-radius: 0.5rem;
@@ -1140,7 +1175,7 @@ footer {
   background-color: transparent;
   color: #5ed58c;
   border: 0.2rem solid #5ed58c;
-  text-transform: capitalize;
+ 
   padding: 1rem 1.5rem;
   border-radius: 2rem;
   font-size: 1.8rem;
@@ -1193,7 +1228,7 @@ footer {
 .btnDarkBlue {
   background-color: #060d43;
   padding: 0.8rem 2.5rem;
-  text-transform: capitalize;
+  
   font-size: 1.6rem;
   color: #fff;
   border-radius: 2rem;
@@ -1275,7 +1310,7 @@ a, a:hover, a:focus, a:active {
   font-size: 2.2rem;
   font-weight: bold;
   color: #060d43;
-  text-transform: capitalize;
+  
 }
 .stepperinline .stepper-connector hr {
   height: .2rem;
