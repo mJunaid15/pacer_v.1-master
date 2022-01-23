@@ -165,20 +165,6 @@ function onlyOne(checkbox) {
   });
 }
 
-// checbox checked get value and show the value another elemnt
-const handlerClick = () => {
-  var checkBox = document.querySelectorAll('input[type="checkbox"]');
-  for (var i = 0, n = checkBox.length; i < n; i++) {
-    if (checkBox[i].checked == true) {
-      // console.log('true')
-      let getValue = document.getElementsByClassName("priceGet");
-      let showSelectChecboxP = document.getElementById("showSelectChecboxP");
-      let values = getValue[i].innerHTML;
-      // console.log(  values );
-      showSelectChecboxP.innerHTML = values;
-    }
-  }
-};
 
 // google map
 // function myMap() {

@@ -414,10 +414,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <!--  <button class="placeorderBtn mt-4 mt-lg-0">Place Your Order</button> -->
 
                             <div class=" mt-5 ">
-                                <a class=" placeorderBtn text-decoration-none"
-                                    href="javascript:void(Tawk_API.toggle())">
-                                    Place Your Order
-                                </a>
+                                <div class="wrapperPLace">
+                                    <a class="buttonPlace" href="javascript:void(Tawk_API.toggle())">Place Your Order</a>
+                                </div>
+                                
+                                <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                    <defs>
+                                        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <!-- <a class=" placeorderBtn text-decoration-none"
+                                    >
+                                    
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -449,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="row border-bottom-dash">
                                         <div class="col-12 col-md-6">
-                                            <div class="mb-3">
+                                            <div class="mb-3 me-lg-5">
                                                 <label for="exampleInputEmail1" class="form-label labelTitle">
                                                     Deadline</label>
                                                 <select class="form-select select_input"
@@ -492,22 +505,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             placeholder="Enter Your Email Address">
                                     </div>
                                     <div class="row">
-                                        <div class="col-6 col-md-8">
+                                        <div class="col-6 col-md-6">
                                             <div class="mb-3">
 
                                                 <input type="email" class="form-control select_input" id=""
                                                     placeholder="Enter Your Contact Number">
                                             </div>
                                         </div>
-                                        <div class="col-6 col-md-4">
+                                        <div class="col-6 col-md-6">
                                             <div class="mb-3  ">
-                                                <button class="btnGreen w-100"> Unlock</button>
+                                                <button class="explore">Unlock<span class="icon-right"></span><span class="icon-right after"></span></button>
+                                                <!-- <button class="btnGreen w-100"> Unlock</button> -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-3 text-center">
-
-                                        <a href="javascript:void(Tawk_API.toggle())" class=" btnGreen  "> Order Now</a>
+                                        <button class="btnOrdernow draw-border">Order now</button>
+                                        <!-- <a href="javascript:void(Tawk_API.toggle())" class=" btnGreen  "> Order Now</a> -->
 
                                     </div>
                                 </form>
@@ -925,7 +939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="unstyled centered">
                                             <li>
                                                 <input class="styled-checkbox" name="check"
-                                                    onclick="onlyOne(this), handlerClick()" id="styled-checkbox-1"
+                                                    onclick=" handlerClick(),onlyOne(this)" id="styled-checkbox-1"
                                                     type="checkbox" value="value1">
                                                 <label for="styled-checkbox-1"></label>
                                             </li>
@@ -936,7 +950,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet  mb-0">
-                                            $9888
+                                            £350
                                         </p>
                                     </div>
                                     <div class="col-3">
@@ -966,12 +980,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet  mb-0">
-                                            $39
+                                            £280
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            12h
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -996,12 +1010,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet  mb-0">
-                                            $39
+                                            £220
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            24h
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -1026,12 +1040,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet  mb-0">
-                                            $38
+                                            £180
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            48h
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -1045,7 +1059,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="unstyled centered">
                                             <li>
                                                 <input class="styled-checkbox" name="check"
-                                                    onclick="onlyOne(this), handlerClick()" id="styled-checkbox-5"
+                                                    onclick="onlyOne(this),handlerClick()" id="styled-checkbox-5"
                                                     type="checkbox" value="value1">
                                                 <label for="styled-checkbox-5"></label>
                                             </li>
@@ -1056,12 +1070,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet mb-0">
-                                            $99
+                                            £160
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            4 days
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -1086,12 +1100,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet mb-0">
-                                            $388
+                                            £140
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            7 days
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -1116,12 +1130,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle priceGet  mb-0">
-                                            $39
+                                            £100
                                         </p>
                                     </div>
                                     <div class="col-3">
                                         <p class="labelTitle  mb-0">
-                                            8h
+                                            14 days
                                         </p>
                                     </div>
                                     <div class="col-4">
@@ -1142,7 +1156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="col-12 col-lg-3">
                                         <p class="smallDes text-black-50 mb-1"> Total Price </p>
                                         <p class="labelTitle  mb-0" id="showSelectChecboxP">
-                                            $0.00
+                                            £0.00
                                         </p>
                                     </div>
                                     <div class="col-12 col-lg-3">
@@ -2548,7 +2562,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p class="sub-heading-24px fw-normal pb-3 text-start">
                                 Use Promo Code &nbsp;&nbsp; <span style="color:#5ed58c;">FIRST15</span>
                             </p>
-                            <button class="btnGreen text-white sub-heading-24px fw-normal">Claim Discount</button>
+                            <div class="btn-bg Pokemon">
+    
+                                <div class="btn-group1">
+                                  <div class="btn-pk ball">
+                                    <button class="pokobtn"> 
+                                      <div class="pokemon-ball"></div><a>Claim Discount   <span data-letters="Go!"></span><span data-letters="Go!"></span></a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            <!-- <button class="btnGreen text-white sub-heading-24px fw-normal">Claim Discount</button> -->
 
                         </div>
                     </div>
@@ -3443,6 +3467,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        // checbox checked get value and show the value another elemnt
+const handlerClick = () => {
+  var checkBox = document.querySelectorAll('input[type="checkbox"]');
+//   alert('hello')
+  for (var i = 0, n = checkBox.length; i < n; i++) {
+    if (checkBox[i].checked == true) {
+    //   console.log('true')
+      let getValue = document.getElementsByClassName("priceGet");
+      let showSelectChecboxP = document.getElementById("showSelectChecboxP");
+      let values = getValue[i].innerHTML;
+      // console.log(  values );
+      showSelectChecboxP.innerHTML = values;
+    }
+  }
+};
+
+    </script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
