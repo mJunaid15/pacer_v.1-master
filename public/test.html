@@ -1,170 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Lato:400,100,300,700,100italic,300italic,400italic,700italic,900,900italic");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    .card-flip {
+      width: 20.0rem;
+      height: 20.0rem;
+      /* margin: 1em; */
+      perspective: 150rem;
+    }
+
+    .card-flip .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.75, 0, 0.85, 1);
+    }
+
+    .more-flip {
+      display: none;
+    }
+
+    .more-flip:checked~.content {
+      transform: rotateY(180deg);
+    }
+
+    .front-flip,
+    .back-flip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      border-radius: .6rem;
+    }
+
+    .front-flip .inner,
+    .back-flip .inner {
+      height: 100%;
+
+      /* padding: 1.5em; */
+      transform: translateZ(80px) scale(0.94);
+    }
+
+    .front-flip {
+      background-color: #fff;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .front-flip:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: .6rem;
+      backface-visibility: hidden;
+      background: linear-gradient(55deg, #859ddf26, #5ed58c);
+    }
 
 
 
+ 
 
+  
 
+    .back-flip {
+      transform: rotateY(180deg);
+      background-color: #fff;
+      border: .2rem solid #f0f0f0;
+    }
 
+    .inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
 
- .btn-bg.Pokemon {
-  background: #c1c1c1;
-  width: fit-content;
-  border-radius: 5px;
+    }
 
-}
- .btn-bg.Pokemon .btn-group .ball button {
-  /* border: 5px solid #5ed58c; */
-  border: none;
-  border-radius: 5px;
-  background: transparent;
-  overflow: hidden;
-  position: relative;
-}
- .btn-bg.Pokemon .btn-group .ball button:hover {
-  /* border-color: #c1c1c1; */
-}
- .btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
-  transform: translate3d(0, -100%, 0);
-  transition: transform 0.25s;
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
- .btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::after {
-  transform: translate3d(0, 100%, 0);
-  transition: transform 0.25s;
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
- .btn-bg.Pokemon .btn-group .ball button:hover a {
-  transition: none;
-  color: transparent;
-  z-index: 999;
-}
- .btn-bg.Pokemon .btn-group .ball button:hover a::before {
-  transform: translate3d(100%, 0, 0);
-}
- .btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,
- .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
-  transition-delay: 0.3s;
-  transform: translate3d(0, 0, 0);
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
- .btn-bg.Pokemon .btn-group .ball button .pokemon-ball {
-  position: absolute;
-  content: 'Go!';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-}
- .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before,
- .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: #5ed58c;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.25s;
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
- .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
-  top: 50%;
-  background: #fff;
-}
- .btn-bg.Pokemon .btn-group .ball button a {
-  color: #50514f;
-  font-weight: 600;
-  font-size: 1.5em;
-  transition: color 0.5s 0.25s;
-  overflow: hidden;
-  display: inline-block;
-  position: relative;
-  z-index: 999;
-}
- .btn-bg.Pokemon .btn-group .ball button a::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 5px;
-  background: #fff;
-  top: calc(50% - 2.5px);
-  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
-  transform: translate3d(-100%, 0, 0);
-}
- .btn-bg.Pokemon .btn-group .ball button a span {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
- .btn-bg.Pokemon .btn-group .ball button a span::before {
-  position: absolute;
-  content: attr(data-letters);
-  left: 0;
-  width: 100%;
-  color: #fff;
-  transition: transform 0.5s;
-}
- .btn-bg.Pokemon .btn-group .ball button a span:first-child::before {
-  top: 0;
-  color: #5ed58c;
-  transform: translate3d(0, 100%, 0);
-}
- .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2) {
-  top: 50%;
-}
- .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2)::before {
-  bottom: 0;
-  transform: translate3d(0, -100%, 0);
-}
+    .back-flip .info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #355cc9;
+      grid-row: 3;
+    }
 
+    .back-flip .info:not(:first-of-type):before {
+      content: "";
+      position: absolute;
+      left: -0.9em;
+      height: 1.8rem;
+      width: .1rem;
+      background-color: #ccc;
+    }
 
-
-
-.pokobtn {
-  cursor: pointer;
-  overflow: visible;
-  outline: none;
-  color: #fff;
-  position: relative;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  padding: 1rem 3rem 1rem 3rem;
-  text-transform: uppercase;
-  font-family: "Lato";
-  font-size: 1.5em;
-}
-.pokobtn a {
-  text-decoration: none;
-}
-
-
-    </style>
-</head>
-<body>
-    <div class="btn-bg Pokemon">
+   
     
-        <div class="btn-group">
-          <div class="btn ball">
-            <button class="pokobtn"> 
-              <div class="pokemon-ball"></div><a>Pokémon   <span data-letters="Go!"></span><span data-letters="Go!"></span></a>
-            </button>
+
+    
+
+    .back-flip .info .icon span {
+      display: block;
+      margin-top: -0.25em;
+      font-size: 0.8em;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .back-flip .description {
+    
+      font-size: 1.4rem;
+      border-radius: .5rem;
+      font-weight: 600;
+      line-height: 1.4em;
+      overflow: auto;
+      color: #1a2954;
+      padding: 1.0rem;
+    }
+
+    .back-flip .location,
+    .back-flip .price {
+      font-weight: 600;
+      color: #40444e;
+      grid-row: 1;
+      font-size: 0.86em;
+    }
+
+   
+    
+    .button-flip {
+   
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 0 1.5em;
+    height: 3em;
+    line-height: 2.9em;
+    min-width: 3em;
+    background-color: transparent;
+    border: solid 0.2rem #fff;
+    color: #fff;
+    border-radius: 0.4rem;
+    text-align: center;
+    left: 50%;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 0.6rem rgb(0 0 0 / 30%);
+    }
+
+    .button-flip:hover {
+      background-color: #fff;
+    box-shadow: inset 1px 1px 2rem 0px #5ed58cc7;
+    text-shadow: none;
+    color: #1a2954;
+    border: none;
+    }
+
+    .button-flip.return {
+      line-height: 3em;
+      color: #355cc9;
+      border-color: #355cc9;
+      text-shadow: none;
+    }
+
+    .button-flip.return:hover {
+      background-color: #355cc9;
+      color: #fff;
+      box-shadow: none;
+    }
+    ::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #859ddf;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #355cc9;
+}
+  </style> -->
+  
+  <style>
+    .fake-div {
+  width:100%;
+  height: 1280px;
+  position:relative;
+}
+  </style>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- <div class="">
+    <div class="card-flip">
+      <input type="checkbox" id="card1" class="more-flip" aria-hidden="true">
+      <div class="content">
+        <div class="front-flip">
+          <div class="inner ">
+            <div>
+              
+              <h1 class="numbersExperts  m-0" >01
+                <span class="numberExpertsapn">+</span></h1>
+                <h3 class="sub-heading text-start mb-0">Top-notch experts
+                </h3>
+            </div>
+            <div class="">
+              <label for="card1" class="button-flip" aria-hidden="true">
+                Details
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="back-flip">
+          <div class="inner">
+
+           
+            <div class="description">
+              <p class="smallDes">We call them top-notch because our pool of writers is from all over
+                  the world who go
+                  through the 5-step recruitment process. They have minimum master’s degrees or Ph.D.;
+                  hence they are
+                  well versed in their subjects and can dispose of the peculiarity of any task of the
+                  discipline in which they
+                  specialize. </p>
+            </div>
+
+            <label for="card1" class="button-flip return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+            </label>
           </div>
         </div>
       </div>
-  
+    </div> -->
+    <!-- <div class="card">
+      <input type="checkbox" id="card2" class="more">
+      <div class="content">
+        <div class="front"
+          style="back-flipground-image: url('https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c02fb96f9cfc16d3649835b75d1b2033&auto=format&fit=crop&w=1350&q=80')">
+          <div class="inner">
+            <h2>Modern flat</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <label for="card2" class="button" aria-hidden="true">
+              Details
+            </label>
+          </div>
+        </div>
+        <div class="back-flip">
+          <div class="inner">
+            <div class="info">
+              <span>4</span>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+                <span>people</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>3</span>
+              <div class="icon">
+                <i class="fas fa-door-open"></i>
+                <span>rooms</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>2</span>
+              <div class="icon">
+                <i class="fas fa-bed"></i>
+                <span>beds</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>1</span>
+              <div class="icon">
+                <i class="fas fa-bath"></i>
+                <span>bath</span>
+              </div>
+            </div>
+            <div class="description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem unde ea voluptas
+                fuga
+                odio vel veniam eveniet, explicabo autem earum?</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+            <div class="location">Warsaw, Poland</div>
+            <div class="price">42€ / day</div>
+            <label for="card2" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <input type="checkbox" id="card3" class="more">
+      <div class="content">
+        <div class="front"
+          style="back-flipground-image: url('https://images.unsplash.com/photo-1529595354331-201ad3ae5e71?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6114533e2d0c1c81534fe13611dbfd76&auto=format&fit=crop&w=658&q=80')">
+          <div class="inner">
+            <h2>Luxury property</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <label for="card3" class="button" aria-hidden="true">
+              Details
+            </label>
+          </div>
+        </div>
+        <div class="back-flip">
+          <div class="inner">
+            <div class="info">
+              <span>8</span>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+                <span>people</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>7</span>
+              <div class="icon">
+                <i class="fas fa-door-open"></i>
+                <span>rooms</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>5</span>
+              <div class="icon">
+                <i class="fas fa-bed"></i>
+                <span>beds</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>2</span>
+              <div class="icon">
+                <i class="fas fa-bath"></i>
+                <span>baths</span>
+              </div>
+            </div>
+            <div class="description">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa libero
+                totam nostrum consequatur autem quae provident quos alias fugit maxime nisi labore,
+                temporibus tempore illo natus voluptates aliquam ipsum officia quasi placeat aut
+                facilis
+                laudantium nam!</p>
+              <p>Quam, iusto.Neque ratione ut deserunt unde dicta nesciunt,
+                repudiandae
+                aspernatur explicabo numquam! Tenetur!</p>
+            </div>
+            <div class="location">Cracow, Poland</div>
+            <div class="price">60€ / day</div>
+            <label for="card3" class="button return" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- </div> -->
+
+
+  <div class="fake-div">
+  </div>
+  <div id="counter">
+      <div class="counter-value" data-count="300">0</div>
+      <div class="counter-value" data-count="400">100</div>
+      <div class="counter-value" data-count="1500">200</div>
+  </div>
+  <div class="fake-div">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script>
+    var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
+  </script>
 </body>
+
 </html>
