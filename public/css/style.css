@@ -146,6 +146,20 @@ html {
   right: 2%;
   cursor: pointer;
 }
+.iconsInputPrivacy{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* background-color: #060d43; */
+  position: absolute;
+  left: 2%;
+  cursor: pointer;
+
+
+}
 .iconcolor {
   color: rgb(202, 197, 197);
   font-size: 1.4rem;
@@ -1932,14 +1946,62 @@ background: #5ed58c;
 }
 
 /* flip cart animation end  */
+.tagbtn{
+  background-color: #EEFBF3;
+  padding: .5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: relative;
+
+}
+.tagbtn::before{
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  background-color: #5ed58c;
+  border-radius: 50%;
+  position: absolute;
+  left: 8%;
+  top: 43%;
+
+}
+.seacrhMaindivPrivacy{
+  height: 66rem;
+  padding: 2rem 1.5rem;
+  border: 0.1rem solid #f3f2f2;
+  border-radius: 1rem;
+}
 
 
 
-
-
-
-
-
+.detailsDivPrivacy {
+  /* width: 40.0rem; */
+  /* height: 400px; */
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 10%; */
+  /* transform: translateX(30%); */
+  /* transform: translateY(-50%); */
+}
+.heroCalFormBecomewriter {
+  background-color: #fff;
+  padding: 2.5rem 1rem;
+  height: auto;
+  width: 100%;
+  border-radius: 2rem;
+}
+.seacrhMaindivBecomeWriter {
+  height: 83.0rem;
+  padding: 2rem 1.5rem;
+  border: 0.1rem solid #f3f2f2;
+  border-radius: 1rem;
+}
 
 
 
