@@ -198,17 +198,60 @@
   </style> -->
   
   <style>
-    .fake-div {
-  width:100%;
-  height: 1280px;
-  position:relative;
+   .read-more-state {
+  display: none;
 }
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+ 
+
+}
+
   </style>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+  <div>
+    <input type="checkbox" class="read-more-state" id="post-2" />
+  
+    <div class="read-more-wrap">
+      <p>lorem lorem20 lorem20 lorem20lorem20lorem20lorem20lorem20lorem20
+      <span class="read-more-target">loremloremloremloremloremloremloremloremlorem 4</span>
+
+      </p> 
+      
+    </div>
+    <label for="post-2" class="read-more-trigger"></label>
+   
+  </div>
+  
+
+
   <!-- <div class="">
     <div class="card-flip">
       <input type="checkbox" id="card1" class="more-flip" aria-hidden="true">
@@ -391,15 +434,7 @@
   <!-- </div> -->
 
 
-  <div class="fake-div">
-  </div>
-  <div id="counter">
-      <div class="counter-value" data-count="300">0</div>
-      <div class="counter-value" data-count="400">100</div>
-      <div class="counter-value" data-count="1500">200</div>
-  </div>
-  <div class="fake-div">
-  </div>
+ 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 

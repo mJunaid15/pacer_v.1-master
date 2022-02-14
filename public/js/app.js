@@ -76,7 +76,7 @@ window.intlTelInput(input, {
   initialCountry: "pk",
   // localizedCountries: { 'de': 'Deutschland' },
   // nationalMode: true,
-  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+  onlyCountries: ['pk'],
   placeholderNumberType: "MOBILE",
   // preferredCountries: ['cn', 'jp'],
   separateDialCode: true,
