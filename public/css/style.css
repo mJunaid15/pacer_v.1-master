@@ -2079,6 +2079,12 @@ a:active {
   font-size: 3.9rem;
   color: #060d43;
 }
+.logoSignin {
+  width: 15rem;
+}
+.pagenotfoundimg{
+  width: 35.0rem;
+}
 
 /* media query  */
 
