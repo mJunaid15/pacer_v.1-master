@@ -727,7 +727,7 @@ html {
 
 .bannerSection {
   padding: 5rem 0;
-  background-color: #e8e8e8;
+  background-color: #e8e8e84a;
 }
 /* .container {
   max-width: 163.7rem !important;
@@ -1682,6 +1682,9 @@ a:active {
   border: none;
 }
 @media (min-width: 600px) {
+  .checkoutsampleWidthHeading{
+    width: 70%; margin: 0 auto;
+  }
   .padding-x-lg{
     padding: 1.0rem 10.0rem;
   }
@@ -1739,6 +1742,10 @@ a:active {
   width: 35rem;
   height: 25rem;
   perspective: 150rem;
+}
+.card-flip-Ourprocess {
+  width: 20rem !important;
+    height: 12rem !important;
 }
 
 .card-flip .content {
@@ -2086,9 +2093,49 @@ a:active {
   width: 35.0rem;
 }
 
+
+/* about us css start  */
+.aboutusHeroImgDiv{
+  width: 100%;
+  height: 70.0rem;
+  position: relative;
+  /* background-color: red; */
+
+}
+.aboutimg1{
+  background-image: url(../img/Deliverables/aaron-burden-y02jEX_B0O0-unsplash.jpg);
+  background-size: 111% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  height: 40.0rem;
+  width: 35.0rem;
+  border-radius: 1.5rem;
+}
+
+.aboutimg2{
+  background-image: url(../img/Deliverables/lilartsy-333oj7zFsdg-unsplash.jpg);
+  background-size: 111% 100%;
+  background-repeat: no-repeat;
+
+  height: 40.0rem;
+  width: 34.0rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  
+  transform: translate(-17%,31%);
+
+}
+/* about us css end  */
+
 /* media query  */
 
 @media (min-width: 1200px) {
+  .moneyBackImg{
+    margin-bottom: -8.0rem;
+  }
   .profesionalWritersection {
     padding: 15rem 0;
   }
